@@ -35,6 +35,15 @@ body {
     }
 }
 
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-cert {
+    animation: float 4s ease-in-out infinite;
+}
 .fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
 }
