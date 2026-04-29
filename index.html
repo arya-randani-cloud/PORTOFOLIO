@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LM. Arya Randani - Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Rajdhani:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (CDN for zero-install) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Rajdhani', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body
+    class="bg-gray-50 text-gray-900 dark:bg-dark-900 dark:text-white transition-colors duration-300 antialiased overflow-x-hidden selection:bg-primary-500 selection:text-white">
+
+    <!-- Preloader -->
+    <div id="preloader"
+        class="fixed inset-0 z-[100] bg-white dark:bg-dark-900 flex items-center justify-center transition-opacity duration-700">
+        <div class="font-tech text-4xl md:text-5xl font-bold tracking-[0.3em] flex gap-2" id="preloader-text">
+            <span class="text-primary-500">PORTO</span><span class="text-gray-900 dark:text-white">FOLIO</span>
+        </div>
+    </div>
+    <!-- Particle Background -->
+    <div id="particles-js" class="fixed inset-0 z-0 pointer-events-none opacity-40 dark:opacity-20 transition-opacity">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 glass-nav" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 font-tech text-2xl font-bold tracking-wider text-primary-500">
+                    PORTO<span class="text-gray-900 dark:text-white">FOLIO</span>
+                </div>
+
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home"
+                            class="nav-link hover:text-primary-500 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                            data-i18n="nav_home">Beranda</a>
+                        <a href="#about"
+                            class="nav-link hover:text-primary-500 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                            data-i18n="nav_about">Tentang Saya</a>
+                        <a href="#skills"
+                            class="nav-link hover:text-primary-500 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                            data-i18n="nav_skills">Keahlian</a>
+                        <a href="#projects"
+                            class="nav-link hover:text-primary-500 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                            data-i18n="nav_projects">Proyek</a>
+                        <a href="#contact"
+                            class="nav-link hover:text-primary-500 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                            data-i18n="nav_contact">Kontak</a>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <!-- Language Toggle -->
+                    <button id="lang-toggle"
+                        class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-dark-700 transition-colors focus:outline-none ring-2 ring-transparent hover:ring-primary-500">
+                        <span id="lang-text" class="font-bold text-sm">EN</span>
+                    </button>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle"
+                        class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-dark-700 transition-colors focus:outline-none ring-2 ring-transparent hover:ring-primary-500">
+                        <i id="theme-icon" class="fas fa-sun text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative z-10 pt-20">
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 relative pt-20">
+            <div class="max-w-4xl mx-auto text-center space-y-8" data-aos="fade-up" data-aos-duration="1000">
+                <div class="space-y-4">
+                    <h2 class="text-xl md:text-2xl font-medium text-primary-600 dark:text-primary-400 cinematic-text"
+                        data-i18n="hero_greeting">Halo, Saya</h2>
+                    <h1 class="text-5xl md:text-7xl font-extrabold font-tech tracking-wider text-gray-900 dark:text-white cinematic-text"
+                        id="cinematic-name">
+                        LM. Arya Randani
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed cinematic-text"
+                        data-i18n="hero_role">
+                        Mahasiswa Informatika UAD, Mechanical & Robotics Programmer di Tim Al Jazari.
+                    </p>
+                </div>
+                <div class="pt-8 flex justify-center gap-4">
+                    <a href="#projects"
+                        class="px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-all shadow-[0_0_15px_rgba(14,165,233,0.5)] hover:shadow-[0_0_25px_rgba(14,165,233,0.7)]"
+                        data-i18n="btn_view_projects">
+                        Lihat Proyek
+                    </a>
+                    <a href="#contact"
+                        class="px-8 py-3 bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-700 hover:border-primary-500 dark:hover:border-primary-500 text-gray-900 dark:text-white rounded-lg font-medium transition-all"
+                        data-i18n="btn_contact">
+                        Hubungi Saya
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="800">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold font-tech mb-6" data-i18n="about_title">Tentang Saya</h2>
+                    <div class="w-20 h-1 bg-primary-500 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <!-- Photo Content -->
+                    <div class="relative flex-shrink-0" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="absolute inset-0 bg-primary-500 rounded-xl blur-xl opacity-40 animate-pulse"></div>
+                        <img src="1000226960-01.jpeg" alt="LM. Arya Randani"
+                            class="relative w-64 md:w-80 h-auto rounded-xl border-4 border-white dark:border-dark-800 shadow-2xl z-10 hover:scale-105 transition-transform duration-300">
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="flex-1">
+                        <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed text-justify md:text-left"
+                            data-i18n="about_desc">
+                            Mahasiswa Informatika di Universitas Ahmad Dahlan Semester dua dengan spesialisasi pada
+                            Mechanical and Robotics Programming serta Web Development. Memiliki keahlian teknis dalam
+                            pengembangan kontrol logika perangkat keras menggunakan Arduino Nano dan sistem robotika
+                            terintegrasi. Saat ini aktif dalam riset pengembangan robot bersama Tim Al Jazari dan
+                            Robotic Development Community (RDC) UAD, dengan minat mendalam pada integrasi AI (RAG) dan
+                            UI/UX Design.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills"
+            class="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-dark-800/30 backdrop-blur-md border-y border-gray-200 dark:border-dark-700">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold font-tech" data-i18n="skills_title">Keahlian Teknis</h2>
+                    <div class="w-20 h-1 bg-primary-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
+
+                    <!-- Skill Item -->
+                    <div class="skill-card px-6 py-4 bg-white dark:bg-dark-800 rounded-xl shadow-lg border border-gray-100 dark:border-dark-700 hover:border-primary-500 transition-all hover:-translate-y-1 hover:shadow-primary-500/20"
+                        data-aos="zoom-in" data-aos-delay="100">
+                        <span class="font-semibold flex items-center gap-3 text-lg"><i
+                                class="fas fa-code text-primary-500 text-xl"></i> C++</span>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div class="skill-card px-6 py-4 bg-white dark:bg-dark-800 rounded-xl shadow-lg border border-gray-100 dark:border-dark-700 hover:border-primary-500 transition-all hover:-translate-y-1 hover:shadow-primary-500/20"
+                        data-aos="zoom-in" data-aos-delay="200">
+                        <span class="font-semibold flex items-center gap-3 text-lg"><i
+                                class="fab fa-html5 text-orange-500 text-xl"></i> HTML</span>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div class="skill-card px-6 py-4 bg-white dark:bg-dark-800 rounded-xl shadow-lg border border-gray-100 dark:border-dark-700 hover:border-primary-500 transition-all hover:-translate-y-1 hover:shadow-primary-500/20"
+                        data-aos="zoom-in" data-aos-delay="300">
+                        <span class="font-semibold flex items-center gap-3 text-lg"><i
+                                class="fas fa-microchip text-teal-500 text-xl"></i> Arduino C</span>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div class="skill-card px-6 py-4 bg-white dark:bg-dark-800 rounded-xl shadow-lg border border-gray-100 dark:border-dark-700 hover:border-primary-500 transition-all hover:-translate-y-1 hover:shadow-primary-500/20"
+                        data-aos="zoom-in" data-aos-delay="400">
+                        <span class="font-semibold flex items-center gap-3 text-lg"><i
+                                class="fas fa-cube text-red-500 text-xl"></i> SolidWorks</span>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div class="skill-card px-6 py-4 bg-white dark:bg-dark-800 rounded-xl shadow-lg border border-gray-100 dark:border-dark-700 hover:border-primary-500 transition-all hover:-translate-y-1 hover:shadow-primary-500/20"
+                        data-aos="zoom-in" data-aos-delay="500">
+                        <span class="font-semibold flex items-center gap-3 text-lg"><i
+                                class="fas fa-brain text-purple-500 text-xl"></i> AI RAG Integration</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold font-tech" data-i18n="projects_title">Proyek Unggulan</h2>
+                    <div class="w-20 h-1 bg-primary-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+
+                    <!-- Project 2 -->
+                    <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-dark-800 shadow-xl border border-gray-100 dark:border-dark-700 hover:border-primary-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-primary-500/20"
+                        data-aos="zoom-in" data-aos-delay="100">
+                        <div
+                            class="h-48 bg-gradient-to-r from-green-900 to-teal-900 flex items-center justify-center relative overflow-hidden">
+                            <i
+                                class="fas fa-leaf text-6xl text-green-700 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div
+                                class="absolute inset-0 bg-green-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <div class="text-sm text-green-500 font-mono mb-2">Web Application</div>
+                            <h3 class="text-2xl font-bold mb-3 font-tech text-gray-900 dark:text-white">Eco Digital
+                                Nusantara</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6" data-i18n="proj2_desc">
+                                Platform web interaktif yang berfokus pada pelestarian ekosistem dan digitalisasi alam
+                                Nusantara.
+                            </p>
+                            <div class="flex gap-2 flex-wrap mb-6">
+                                <span
+                                    class="px-3 py-1 text-xs rounded-full bg-gray-100 dark:bg-dark-900 text-gray-700 dark:text-gray-300">HTML</span>
+                                <span
+                                    class="px-3 py-1 text-xs rounded-full bg-gray-100 dark:bg-dark-900 text-gray-700 dark:text-gray-300">Tailwind</span>
+                                <span
+                                    class="px-3 py-1 text-xs rounded-full bg-gray-100 dark:bg-dark-900 text-gray-700 dark:text-gray-300">JS</span>
+                            </div>
+                            <a href="https://ecodigitalnusantara.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center gap-2 text-primary-500 hover:text-primary-400 font-semibold transition-colors">
+                                <span data-i18n="btn_visit">Kunjungi Situs</span> <i
+                                    class="fas fa-external-link-alt group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="group relative rounded-2xl overflow-hidden bg-white dark:bg-dark-800 shadow-xl border border-gray-100 dark:border-dark-700 hover:border-primary-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-primary-500/20"
+                        data-aos="zoom-in" data-aos-delay="200">
+                        <div
+                            class="h-48 bg-gradient-to-r from-blue-900 to-indigo-900 flex items-center justify-center relative overflow-hidden">
+                            <i
+                                class="fas fa-wpforms text-6xl text-blue-700 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div
+                                class="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <div class="text-sm text-blue-500 font-mono mb-2">Web Form</div>
+                            <h3 class="text-2xl font-bold mb-3 font-tech text-gray-900 dark:text-white">Formulir Ormawa
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6" data-i18n="proj3_desc">
+                                Sistem formulir pendaftaran digital khusus untuk organisasi mahasiswa.
+                            </p>
+                            <div class="flex gap-2 flex-wrap mb-6">
+                                <span
+                                    class="px-3 py-1 text-xs rounded-full bg-gray-100 dark:bg-dark-900 text-gray-700 dark:text-gray-300">HTML</span>
+                                <span
+                                    class="px-3 py-1 text-xs rounded-full bg-gray-100 dark:bg-dark-900 text-gray-700 dark:text-gray-300">CSS</span>
+                                <span
+                                    class="px-3 py-1 text-xs rounded-full bg-gray-100 dark:bg-dark-900 text-gray-700 dark:text-gray-300">JS</span>
+                            </div>
+                            <a href="https://arya-randani-cloud.github.io/TUGAS-Formulir-web-untuk-Ormawa/"
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center gap-2 text-primary-500 hover:text-primary-400 font-semibold transition-colors">
+                                <span data-i18n="btn_visit">Kunjungi Situs</span> <i
+                                    class="fas fa-external-link-alt group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-100 dark:bg-dark-900">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold font-tech mb-6" data-i18n="contact_title">Mari Terhubung</h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto" data-i18n="contact_desc">
+                    Saya selalu terbuka untuk mendiskusikan pekerjaan pengembangan produk atau peluang kemitraan.
+                </p>
+
+                <div class="flex justify-center gap-6">
+                    <a href="https://github.com/arya-randani" target="_blank"
+                        class="p-4 bg-white dark:bg-dark-800 rounded-full shadow-lg hover:shadow-primary-500/20 text-gray-800 dark:text-white hover:text-primary-500 transition-all hover:-translate-y-1">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="mailto:abzul03@gmail.com"
+                        class="p-4 bg-white dark:bg-dark-800 rounded-full shadow-lg hover:shadow-primary-500/20 text-gray-800 dark:text-white hover:text-primary-500 transition-all hover:-translate-y-1">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/arya-randani" target="_blank"
+                        class="p-4 bg-white dark:bg-dark-800 rounded-full shadow-lg hover:shadow-primary-500/20 text-gray-800 dark:text-white hover:text-primary-500 transition-all hover:-translate-y-1">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white dark:bg-dark-800 py-8 border-t border-gray-200 dark:border-dark-700 text-center">
+        <p class="text-gray-500 dark:text-gray-400 text-sm">
+            &copy; 2026 LM. Arya Randani. <span data-i18n="footer_rights">Hak Cipta Dilindungi.</span>
+        </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
